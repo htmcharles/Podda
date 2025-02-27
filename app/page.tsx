@@ -4,7 +4,6 @@ import LeftNavbar from '../app/components/LeftNavbar';
 export default function Home() {
   return (
       <div className="">
-          <LeftNavbar />
           hello
     </div>
   );
