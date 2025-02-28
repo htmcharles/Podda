@@ -1,10 +1,10 @@
 import Image from "next/image";
-import LeftNavbar from '../app/components/LeftNavbar';
+import GigaMarketplace from "../app/components/GigMarketplace";
 
 export default function Home() {
   return (
       <div className="">
-          hello
+          <GigaMarketplace />
     </div>
   );
 }
