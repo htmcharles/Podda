@@ -1,3 +1,14 @@
-export { default as HomeIcon } from './Home.svg';
 export { default as AboutIcon } from './Activity.svg';
-export { default as ServicesIcon } from './Setting.svg';
+export { default as ChartIcon } from './Chart.svg';
+export { default as FileIcon } from './file.svg';
+export { default as FrameIcon } from './Frame.svg';
+export { default as GameIcon } from './Game.svg';
+export { default as GlobeIcon } from './globe.svg';
+export { default as GroupIcon } from './Group.svg';
+export { default as HomeIcon } from './Home.svg';
+export { default as LogoutIcon } from './Logout.svg';
+export { default as NextIcon } from './next.svg';
+export { default as ProfileIcon } from './Profile.svg';
+export { default as SettingIcon } from './Setting.svg';
+export { default as VercelIcon } from './vercel.svg';
+export { default as WindowIcon } from './windown.svg';
