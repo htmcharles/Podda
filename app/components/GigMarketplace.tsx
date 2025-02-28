@@ -21,7 +21,7 @@ const buttonVariants = cva(
         outline: "border border-input bg-transparent hover:bg-accent",
       },
       size: {
-        default: "h-10 px-4 py-2",
+        default: "h-8 px-3 py-1",
       },
     },
     defaultVariants: {
@@ -40,8 +40,8 @@ function StarIcon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="currentColor"
       stroke="currentColor"
@@ -60,8 +60,8 @@ function BookmarkIcon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -80,8 +80,8 @@ function FileTextIcon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -115,24 +115,20 @@ export default function GigMarketplace() {
         }
       `}</style>
 
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 max-w-[762px] max-h-[434px] bg-[#272932] p-4 rounded-xl">
         {/* Header with tabs and create button */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-6">
           <div className="flex">
             <button
               onClick={() => setActiveTab("posts")}
-              className={`px-4 py-2 flex items-center gap-2 border-b-2 ${
-                activeTab === "posts" ? "text-white border-transparent" : "text-gray-400 border-transparent"
-              }`}
+              className={`px-3 py-1 flex items-center gap-2 border-b-2 ${activeTab === "posts" ? "text-white border-transparent" : "text-gray-400 border-transparent"}`}
             >
               <FileTextIcon width={20} height={20} />
               POSTS
             </button>
             <button
               onClick={() => setActiveTab("gigs")}
-              className={`px-4 py-2 flex items-center gap-2 border-b-2 ${
-                activeTab === "gigs" ? "text-purple-400 border-purple-400" : "text-gray-400 border-transparent"
-              }`}
+              className={`px-3 py-1 flex items-center gap-2 border-b-2 ${activeTab === "gigs" ? "text-purple-400 border-purple-400" : "text-gray-400 border-transparent"}`}
             >
               <BookmarkIcon width={20} height={20} />
               GIGS
@@ -147,35 +143,33 @@ export default function GigMarketplace() {
         </div>
 
         {/* Gig Card */}
-        <div className="bg-[#25252D] rounded-xl overflow-hidden mb-8">
+        <div className="bg-[#25252D] rounded-xl overflow-hidden mb-6">
           <div className="flex flex-col md:flex-row">
             {/* Gig Image */}
             <div className="md:w-1/3">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yfDIifgjfmnw4hburDk4AV18Z7vmpJ.png"
+                src="/imgs/minectraft.png"
                 alt="Minecraft"
-                width={300}
-                height={200}
+                width={250}
+                height={150}
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Gig Details */}
-            <div className="p-6 md:w-2/3 flex flex-col justify-between">
+            <div className="p-4 md:w-2/3 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="bg-green-500 w-4 h-4 rounded-sm"></div>
-                  <h2 className="text-xl font-semibold">Minecraft</h2>
+                  <div className="bg-green-500 w-3 h-3 rounded-sm"></div>
+                  <h2 className="text-lg font-semibold">Minecraft</h2>
                   <div className="flex items-center text-yellow-400 ml-2">
-                    <StarIcon className="fill-yellow-400 stroke-yellow-400 w-4 h-4" />
+                    <StarIcon className="fill-yellow-400 stroke-yellow-400 w-3 h-3" />
                     <span className="ml-1">4.9</span>
                     <span className="text-gray-400 text-sm ml-1">(25)</span>
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi dunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <p className="text-gray-400 text-xs mb-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
               </div>
 
@@ -190,11 +184,11 @@ export default function GigMarketplace() {
         </div>
 
         {/* Stats Section */}
-        <div className="mb-8">
+        <div className="mb-6">
           <div className="flex items-center mb-4">
             <h3 className="text-gray-400 mr-2">View count</h3>
             <div className="flex items-center text-yellow-400">
-              <StarIcon className="fill-yellow-400 stroke-yellow-400 w-4 h-4" />
+              <StarIcon className="fill-yellow-400 stroke-yellow-400 w-3 h-3" />
               <span className="ml-1">4.9</span>
               <span className="text-gray-400 text-sm ml-1">(25)</span>
             </div>
@@ -202,39 +196,37 @@ export default function GigMarketplace() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[{ title: "Response time", rating: "5.0" }, { title: "Friendliness", rating: "4.9" }, { title: "Performance", rating: "4.9" }, { title: "Satisfaction", rating: "4.9" }].map((stat, index) => (
-              <div key={index} className="bg-[#25252D] p-4 rounded-lg">
-                <h4 className="text-gray-400 text-sm mb-2">{stat.title}</h4>
+              <div key={index} className="bg-[#25252D] p-3 rounded-lg">
+                <h4 className="text-gray-400 text-xs mb-2">{stat.title}</h4>
                 <div className="flex items-center">
-                  <div className="flex">
+                  <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <StarIcon key={star} className="w-4 h-4 fill-yellow-400 stroke-yellow-400" />
+                      <StarIcon key={star} className="w-3 h-3 fill-yellow-400 stroke-yellow-400" />
                     ))}
                   </div>
                   <span className="ml-2">{stat.rating}</span>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* User Profile Section */}
-        <div className="bg-[#25252D] p-4 rounded-lg flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-purple-700 flex items-center justify-center text-white font-semibold">
+                  </div>
+                  {/* User Profile Section */}
+        <div className="bg-[#25252D] p-3 rounded-lg flex items-start gap-3">
+          <div className="w-8 h-8 rounded-full bg-purple-700 flex items-center justify-center text-white font-semibold">
             M
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <h3 className="font-semibold">mel891</h3>
+              <h3 className="font-semibold text-sm">mel891</h3>
               <div className="flex items-center text-yellow-400">
-                <StarIcon className="fill-yellow-400 stroke-yellow-400 w-4 h-4" />
+                <StarIcon className="fill-yellow-400 stroke-yellow-400 w-3 h-3" />
                 <span className="ml-1">4.9</span>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mt-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi dunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam.
+            <p className="text-gray-400 text-xs mt-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
           </div>
+        </div>
         </div>
       </div>
     </div>
