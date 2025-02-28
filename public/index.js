@@ -12,3 +12,4 @@ export { default as ProfileIcon } from './Profile.svg';
 export { default as SettingIcon } from './Setting.svg';
 export { default as VercelIcon } from './vercel.svg';
 export { default as WindowIcon } from './windown.svg';
+export { default as  altersky} from './imgs/altersky.png';
